@@ -961,19 +961,34 @@ function openVideo(i) {
 
   miss.style.display = "none";
   el.onerror = () => { miss.style.display = "block"; };
-  el.src = encodeURI(v.source); 
+  
+  const srcUrl = encodeURI(v.source);
+  el.src = srcUrl; 
   el.load();
+
+  // Trigger video playback on click event
+  const p = el.play();
+  if (p !== undefined) {
+    p.catch(() => {
+      // Mobile autoplay policy fallback: User can tap play button
+    });
+  }
 
   $("#vTitle").textContent = v.title;
   $("#vDesc").textContent = v.description + " " + (v.detail ? v.detail.content : "");
-  $("#vMeta").textContent = `Duration: ${v.duration} • Added on ${v.date}`;
+  $("#vMeta").textContent = `Duration: ${v.duration} • ${v.date}`;
   $("#videoModal").classList.add("open");
 }
 
 function closeModals() {
   $$(".modal").forEach((m) => m.classList.remove("open"));
   const el = $("#mainVideo"); 
-  if (el) { el.pause(); el.removeAttribute("src"); el.load(); }
+  if (el) { 
+    el.pause(); 
+    el.currentTime = 0;
+    el.removeAttribute("src"); 
+    el.load(); 
+  }
 }
 
 /* ====================== 8. BIRTHDAY EXPERIENCE ====================== */
