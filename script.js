@@ -533,12 +533,10 @@ const resultCount = "About 1,840 results (0.46 seconds)";
 /* ========================= 2. SEARCH TRIGGERS ========================= */
 const searchTriggers = {
   "pragati bachhav": (q) => showProfile(q),
-  "pragati bhachhav": (q) => showProfile(q),
   "pragati": (q) => showProfile(q),
   "pagati": (q) => showProfile(q),
   "pragati birthday": (q) => showBirthdaySurprise(q),
   "pragati bachhav profile": (q) => showProfile(q),
-  "pragati bhachhav profile": (q) => showProfile(q),
   "pragati college memories": (q) => { showProfile(q); setTab("news"); },
   "birthday": (q) => showBirthdaySurprise(q)
 };
