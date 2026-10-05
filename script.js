@@ -146,7 +146,7 @@ const results = [
   {
     id: "res-profile",
     url: "pragati.search › profile",
-    fullUrl: "https://pragati.search/profile/pragati-bhachhav",
+    fullUrl: "https://pragati.search/profile/pragati-bachhav",
     title: "Pragati Madhukar Bachhav — Profile & Biography",
     desc: "Information Technology 3rd Year student at JSPM's JSCOE, Pune. Originally from Malegaon. Known for her sassy personality, slaying, reading books & novels, and iconic donkey laugh.",
     meta: "Official Profile • Verified",
@@ -181,7 +181,7 @@ const results = [
     id: "res-college",
     url: "pragati.search › college-life",
     fullUrl: "https://pragati.search/college/jscoe-it-3rd-year",
-    title: "Pragati Bhachhav | JSPM's JSCOE — Information Technology (3rd Year)",
+    title: "Pragati Bachhav | JSPM's JSCOE — Information Technology (3rd Year)",
     desc: "Academic journey of Pragati Madhukar Bachhav in Information Technology at JSPM's Jayawantrao Sawant College of Engineering, Pune.",
     meta: "Updated Recently • 3 min read",
     sitelinks: [],
@@ -200,7 +200,7 @@ const results = [
     id: "res-memories",
     url: "pragati.search › memories-vault",
     fullUrl: "https://pragati.search/memories/vault-21",
-    title: "Pragati Bhachhav — Photos, Clips & Timeline",
+    title: "Pragati Bachhav — Photos, Clips & Timeline",
     desc: "A collection of photos and videos captured across awesome moments with Anusha + Anuja. Check out the Images and Videos tabs for the full view.",
     meta: "Photos • Videos • Gallery",
     sitelinks: [],
@@ -220,7 +220,7 @@ const results = [
     id: "res-today",
     url: "pragati.search › birthday-special",
     fullUrl: "https://pragati.search/today/birthday-21",
-    title: "Pragati Bhachhav — 21st Birthday Reveal",
+    title: "Pragati Bachhav — 21st Birthday Reveal",
     desc: "Turning 21 on 6 October 2005! Birthday wishes from Anusha + Anuja, candle blowing reveal, and memories.",
     meta: "Special Occasion • Level 21 Unlocked",
     sitelinks: [],
@@ -328,7 +328,7 @@ const news = [
   {
     id: "news-1",
     src: "CAMPUS CHRONICLES",
-    title: "Pragati Bhachhav Turns 21, Still Chooses Sleep Over Everything",
+    title: "Pragati Bachhav Turns 21, Still Chooses Sleep Over Everything",
     desc: "Sources confirm that the birthday girl remains committed to her early-sleeper lifestyle.",
     time: "2 hours ago",
     thumb: "assets/her pics/Screenshot_20261005_200156_Instagram.jpg.jpeg",
@@ -338,7 +338,7 @@ const news = [
       published: "2 hours ago",
       author: "Anusha + Anuja",
       content: `
-        <h3>Pragati Bhachhav Turns 21, Still Chooses Sleep Over Everything</h3>
+        <h3>Pragati Bachhav Turns 21, Still Chooses Sleep Over Everything</h3>
         <p><strong>PUNE / CAMPUS</strong> — Sources close to Pragati Madhukar Bachhav confirm that despite turning 21 today, her strict early-sleeper lifestyle remains completely non-negotiable.</p>
         <p>Witnesses state that whenever evening plans are discussed, Pragati's default response remains an unbothered <em>"I'm going to sleep"</em>.</p>
         <p>“Her commitment to early sleeping is legendary,” remarked her friends Anusha + Anuja. “No matter how exciting the evening is, 10 PM hits and Pagati is ready for bed.”</p>
@@ -522,8 +522,8 @@ const message = {
 };
 
 const suggestionList = [
-  "Pragati Bhachhav",
-  "Pragati Bhachhav profile",
+  "Pragati Bachhav",
+  "Pragati Bachhav profile",
   "Pragati college memories",
   "Pragati Birthday"
 ];
@@ -532,11 +532,12 @@ const resultCount = "About 1,840 results (0.46 seconds)";
 
 /* ========================= 2. SEARCH TRIGGERS ========================= */
 const searchTriggers = {
-  "pragati bhachhav": (q) => showProfile(q),
   "pragati bachhav": (q) => showProfile(q),
+  "pragati bhachhav": (q) => showProfile(q),
   "pragati": (q) => showProfile(q),
   "pagati": (q) => showProfile(q),
   "pragati birthday": (q) => showBirthdaySurprise(q),
+  "pragati bachhav profile": (q) => showProfile(q),
   "pragati bhachhav profile": (q) => showProfile(q),
   "pragati college memories": (q) => { showProfile(q); setTab("news"); },
   "birthday": (q) => showBirthdaySurprise(q)
@@ -610,7 +611,7 @@ function showHome() {
 
 function showProfile(q) {
   stopBirthday();
-  currentQuery = q || "Pragati Bhachhav";
+  currentQuery = q || "Pragati Bachhav";
   $("#resultsInput").value = currentQuery;
   showView("results");
   setTab("all");
@@ -866,7 +867,7 @@ function openFactDetail(label, value) {
     author: "Knowledge Graph",
     content: `
       <h3>${label} — ${value}</h3>
-      <p>This is a verified fact about <strong>Pragati Bhachhav</strong> stored in the Knowledge Graph.</p>
+      <p>This is a verified fact about <strong>Pragati Bachhav</strong> stored in the Knowledge Graph.</p>
     `
   });
 }
@@ -1137,7 +1138,7 @@ $(".lucky").addEventListener("click", () => showBirthdaySurprise("Pragati Birthd
 // Logos & Nav
 $("#homeLogo").addEventListener("click", showHome);
 $("#homeLink").addEventListener("click", showHome);
-$("#bdayBack").addEventListener("click", () => showProfile(currentQuery || "Pragati Bhachhav"));
+$("#bdayBack").addEventListener("click", () => showProfile(currentQuery || "Pragati Bachhav"));
 
 // Top Nav Apps button & dropdown
 const toggleApps = () => $("#appsDropdown").classList.toggle("open");
