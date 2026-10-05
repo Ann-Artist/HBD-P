@@ -566,8 +566,8 @@ function fixImgs(root) {
     im.addEventListener("error", () => { im.src = placeholder(im.dataset.l || "Photo", +im.dataset.h || 220, +im.dataset.i || 0); }, { once: true }));
 }
 
-const imgTag = (o, i) => `<img src="${o.src}" alt="Photo ${i + 1}" data-h="${o.h || 220}" data-i="${i}" data-l="Photo ${i + 1}" loading="lazy">`;
-const vidTag = (v, i) => `<img src="${v.thumbnail}" alt="${esc(v.title)}" data-h="225" data-i="${i}" data-l="Video ${i + 1}">`;
+const imgTag = (o, i) => `<img src="${encodeURI(o.src)}" alt="Photo ${i + 1}" data-h="${o.h || 220}" data-i="${i}" data-l="Photo ${i + 1}" loading="lazy">`;
+const vidTag = (v, i) => `<img src="${encodeURI(v.thumbnail)}" alt="${esc(v.title)}" data-h="225" data-i="${i}" data-l="Video ${i + 1}">`;
 
 function galleryHTML(list) {
   return `<div class="gallery">${list.map((o) => {
@@ -682,7 +682,7 @@ function entityHTML() {
             <p>${esc(item.desc)}</p>
             <small>${esc(item.time)}</small>
           </div>
-          ${item.thumb ? `<div class="ncard-thumb"><img src="${item.thumb}" alt="News thumbnail" loading="lazy"></div>` : ""}
+          ${item.thumb ? `<div class="ncard-thumb"><img src="${encodeURI(item.thumb)}" alt="News thumbnail" loading="lazy"></div>` : ""}
         </div>
       `).join("")}
 
@@ -765,7 +765,7 @@ function setTab(tab) {
               <p>${esc(n.desc)}</p>
               <small>${esc(n.time)}</small>
             </div>
-            ${n.thumb ? `<div class="ncard-thumb"><img src="${n.thumb}" alt="News thumbnail" loading="lazy"></div>` : ""}
+            ${n.thumb ? `<div class="ncard-thumb"><img src="${encodeURI(n.thumb)}" alt="News thumbnail" loading="lazy"></div>` : ""}
           </div>
         `).join("")}
       </div>
@@ -947,7 +947,7 @@ function openLightbox(i, customList) {
   
   const o = list[lbIndex];
   const im = $("#lbImg");
-  im.src = o.src;
+  im.src = encodeURI(o.src);
   im.addEventListener("error", () => { im.src = placeholder("Photo " + (lbIndex + 1), 400, lbIndex); }, { once: true });
   
   $("#lbInfoGroup").textContent = o.group || "Photo Collection";
@@ -961,7 +961,7 @@ function openVideo(i) {
 
   miss.style.display = "none";
   el.onerror = () => { miss.style.display = "block"; };
-  el.src = v.source; 
+  el.src = encodeURI(v.source); 
   el.load();
 
   $("#vTitle").textContent = v.title;
