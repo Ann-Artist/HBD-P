@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ HOME VIEW ============ -->
+  <section id="home" class="view active">
+    <!-- Top Nav (Home Only) -->
+    <header class="g-top-nav">
+      <div class="nav-right">
+        <a href="#" class="nav-link" id="navGmail">Gmail</a>
+        <a href="#" class="nav-link" id="navImages">Images</a>
+        <button class="icon-btn" id="appsBtn" aria-label="Google apps" title="Google apps">
+          <svg viewBox="0 0 24 24" class="ico-apps"><path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM6 4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+        </button>
+        <button class="avatar-btn" id="profileBtn" title="Google Account">
+          <span class="avatar-text">P</span>
+        </button>
+      </div>
+
+      <!-- Google Apps Dropdown Menu -->
+      <div class="apps-dropdown" id="appsDropdown">
+        <div class="apps-grid">
+          <a href="#" class="app-item" id="appSearch"><div class="app-icon search-ic">G</div><span>Search</span></a>
+          <a href="#" class="app-item" id="appYoutube"><div class="app-icon yt-ic">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="#ea4335"><path d="M8 5v14l11-7z"/></svg>
+          </div><span>YouTube</span></a>
+          <a href="#" class="app-item" id="appNews"><div class="app-icon news-ic">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="#1a73e8"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          </div><span>News</span></a>
+          <a href="#" class="app-item" id="appGmail"><div class="app-icon gmail-ic">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="#ea4335"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div><span>Gmail</span></a>
+          <a href="#" class="app-item" id="appDrive"><div class="app-icon drive-ic">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="#34a853"><path d="M19 13H5v-2h14v2z"/></svg>
+          </div><span>Drive</span></a>
+          <a href="#" class="app-item" id="appPhotos"><div class="app-icon photos-ic">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="#fbbc05"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+          </div><span>Photos</span></a>
+        </div>
+      </div>
+    </header>
+
+    <div class="home-wrap">
+      <div class="doodle-container">
+        <h1 class="logo big" id="homeLogo">
+          <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span>
+        </h1>
+      </div>
+
+      <form class="searchbox" autocomplete="off" id="homeForm">
+        <svg class="ico find-ico" viewBox="0 0 24 24"><path d="M15.5 14h-.8l-.3-.3A6.5 6.5 0 1 0 14 15.5l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>
+        <input type="text" aria-label="Search" spellcheck="false" id="homeInput">
+        <button type="button" class="clear-btn" aria-label="Clear search">&times;</button>
+        
+        <div class="static-ic-group">
+          <svg class="static-ic" viewBox="0 0 24 24" title="Voice Search"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" fill="#4285f4"/><path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z" fill="#34a853"/></svg>
+          <svg class="static-ic" viewBox="0 0 24 24" title="Google Lens"><path d="M12 15c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3z" fill="#4285f4"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" fill="#ea4335"/></svg>
+        </div>
+
+        <ul class="suggest" id="homeSuggest"></ul>
+      </form>
+
+      <div class="btns">
+        <button class="gbtn go">Google Search</button>
+        <button class="gbtn lucky">I'm Feeling Lucky</button>
+      </div>
+
+      <div class="lang-line">
+        Google offered in: <a href="#" class="lang-link">English</a> <a href="#" class="lang-link">हिन्दी</a> <a href="#" class="lang-link">मराठी</a>
+      </div>
+    </div>
+
+    <!-- Google Footer -->
+    <footer class="g-footer">
+      <div class="footer-top">India &bull; From your IP address</div>
+      <div class="footer-bottom">
+        <div class="f-left">
+          <a href="#" class="f-link" id="fAbout">About</a>
+          <a href="#" class="f-link">Advertising</a>
+          <a href="#" class="f-link">Business</a>
+          <a href="#" class="f-link" id="fHow">How Search works</a>
+        </div>
+        <div class="f-right">
+          <a href="#" class="f-link">Privacy</a>
+          <a href="#" class="f-link">Terms</a>
+          <a href="#" class="f-link">Settings</a>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ============ RESULTS VIEW ============ -->
+  <section id="results" class="view">
+    <header class="rhead">
+      <div class="rhead-left">
+        <h1 class="logo small" id="homeLink" title="Go to Google Home">
+          <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span>
+        </h1>
+        
+        <form class="searchbox compact" autocomplete="off" id="resultsForm">
+          <input type="text" aria-label="Search" spellcheck="false" id="resultsInput">
+          <button type="button" class="clear-btn" aria-label="Clear search">&times;</button>
+          <span class="sep"></span>
+          
+          <div class="static-ic-group compact-ic">
+            <svg class="static-ic" viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" fill="#4285f4"/><path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z" fill="#34a853"/></svg>
+            <svg class="static-ic" viewBox="0 0 24 24"><path d="M12 15c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3z" fill="#4285f4"/><path d="M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" fill="#ea4335"/></svg>
+          </div>
+
+          <button type="submit" class="ico-btn find-submit" title="Search">
+            <svg class="ico find-ico" viewBox="0 0 24 24"><path d="M15.5 14h-.8l-.3-.3A6.5 6.5 0 1 0 14 15.5l.3.3v.8l5 5 1.5-1.5-5-5zm-6 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z" fill="#1a73e8"/></svg>
+          </button>
+          <ul class="suggest" id="resultsSuggest"></ul>
+        </form>
+      </div>
+
+      <div class="rhead-right">
+        <button class="icon-btn" id="resultsAppsBtn" title="Google apps">
+          <svg viewBox="0 0 24 24" class="ico-apps"><path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM6 4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+        </button>
+        <button class="avatar-btn" title="Google Account">
+          <span class="avatar-text">P</span>
+        </button>
+      </div>
+    </header>
+    
+    <div class="nav-tabs-wrapper">
+      <nav class="tabs" id="tabs">
+        <button data-tab="all" class="tab-btn on">All</button>
+        <button data-tab="images" class="tab-btn">Images</button>
+        <button data-tab="videos" class="tab-btn">Videos</button>
+        <button data-tab="news" class="tab-btn">News</button>
+      </nav>
+    </div>
+    
+    <div class="stats-bar-wrapper">
+      <div class="stats-bar" id="statsBar">
+        <span class="count-text" id="resultCountText">About 1,840 results (0.46 seconds)</span>
+        <button class="tools-btn" id="toolsBtn">Tools</button>
+      </div>
+    </div>
+
+    <main id="tabContent"></main>
+
+    <!-- Footer for Results Page -->
+    <footer class="g-footer results-footer">
+      <div class="footer-bottom">
+        <div class="f-left">
+          <span>India</span>
+          <span class="dot">&bull;</span>
+          <span>From your IP address</span>
+          <span class="dot">&bull;</span>
+          <a href="#" class="f-link">Update location</a>
+        </div>
+        <div class="f-right">
+          <a href="#" class="f-link">Help</a>
+          <a href="#" class="f-link">Send feedback</a>
+          <a href="#" class="f-link">Privacy</a>
+          <a href="#" class="f-link">Terms</a>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ============ BIRTHDAY VIEW ============ -->
+  <section id="birthday" class="view">
+    <div id="balloons"></div>
+    <button class="back-btn" id="bdayBack">&larr; Back to Google Search</button>
+    <div class="bday-inner">
+      <div class="hero">
+        <span class="bday-badge">SPECIAL OCCASION &bull; LEVEL 21 UNLOCKED</span>
+        <h2 id="bTitle">HAPPY 21ST BIRTHDAY PRAGATI!</h2>
+        <p id="bSub">Looks like your search returned the ultimate result of the day...</p>
+      </div>
+
+      <div class="cake-zone reveal">
+        <div class="cake" id="cake">
+          <div class="candles"></div>
+          <div class="tier t1"></div>
+          <div class="tier t2"><b>21</b></div>
+          <div class="plate"></div>
+        </div>
+        <button class="gbtn wish-gbtn" id="wishBtn">Blow Candles &amp; Make a Wish</button>
+        <p class="wish" id="wishMsg"></p>
+      </div>
+
+      <!-- Photos section (Only her pics) -->
+      <div id="bPhotos"></div>
+      
+      <!-- Letter section from Anusha & Anuja -->
+      <div class="letter reveal" id="letter"></div>
+    </div>
+  </section>
+
+  <!-- ============ MODALS & OVERLAYS ============ -->
+  <canvas id="confetti"></canvas>
+
+  <!-- 1. DETAIL INFO MODAL (For clicking any Search Result, News, Post, etc.) -->
+  <div class="modal detail-modal" id="detailModal">
+    <div class="detail-container">
+      <button class="modal-close-btn" data-close aria-label="Close">&times;</button>
+      <header class="detail-header">
+        <div class="detail-domain">
+          <span class="detail-favicon">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="#5f6368"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          </span>
+          <div>
+            <div class="detail-site-name" id="dSiteName">pragati.search</div>
+            <div class="detail-url" id="dUrl">https://pragati.search/profile</div>
+          </div>
+        </div>
+        <h2 class="detail-title" id="dTitle">Pragati Bhachhav — Profile &amp; Biography</h2>
+        <div class="detail-meta-bar" id="dMetaBar">
+          <span class="detail-tag" id="dTag">Featured Article</span>
+          <span class="detail-date" id="dDate">October 5, 2026</span>
+          <span class="detail-author" id="dAuthor">From Anusha + Anuja</span>
+        </div>
+      </header>
+
+      <div class="detail-body" id="dBody">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <footer class="detail-footer">
+        <button class="gbtn modal-action-btn" id="shareDetailBtn">Share Link</button>
+        <button class="gbtn modal-action-btn primary" data-close>Close Article</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- 2. LIGHTBOX MODAL (For Photos) -->
+  <div class="modal" id="lightbox">
+    <button class="modal-close-btn" data-close>&times;</button>
+    <button class="nav prev" id="lbPrev">&#8249;</button>
+    <div class="lb-wrapper">
+      <figure>
+        <img id="lbImg" alt="">
+      </figure>
+      <div class="lb-sidebar" id="lbSidebar">
+        <h3>Photo Details</h3>
+        <div class="lb-info-row"><span>Category:</span> <strong id="lbInfoGroup">-</strong></div>
+        <div class="lb-info-row"><span>Occasion:</span> <strong>Collection Memories</strong></div>
+        <div class="lb-info-row"><span>Uploaded by:</span> <strong>Anusha</strong></div>
+      </div>
+    </div>
+    <button class="nav next" id="lbNext">&#8250;</button>
+  </div>
+
+  <!-- 3. VIDEO PLAYER MODAL -->
+  <div class="modal" id="videoModal">
+    <button class="modal-close-btn" data-close>&times;</button>
+    <div class="video-modal-content">
+      <video controls playsinline id="mainVideo"></video>
+      <p class="vmiss" id="vMissMsg">Note: Place your video file in assets/videos/ to play custom video!</p>
+      <div class="video-info">
+        <h3 id="vTitle">Video Title</h3>
+        <p class="v-desc" id="vDesc">Video description goes here...</p>
+        <div class="v-meta" id="vMeta">Duration: 0:15 &bull; College Memories</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

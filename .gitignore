@@ -1,0 +1,27 @@
+# OS & System Generated Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Media Assets & Personal Photos (Do not push to GitHub)
+assets/her pics/
+assets/our pics/
+assets/their pics/
+assets/videos/
+
+# Image & Video File Extensions
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.heic
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Editor & IDE Configs
+.vscode/
+.idea/
+*.log
